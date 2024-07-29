@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: persistent-volume-aws
+metadata:
+  name: pv-vol
+spec:
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  capacity:
+    storage: 1Gi
+  awsElasticBlockStore:
+    volumeID: <volume-id>
+    fsType: ext4
