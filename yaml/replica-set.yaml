@@ -1,9 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: frontend
-  labels:
-    tier: frontend
+  name: my-replica-set
 spec:
   replicas: 3
   selector:

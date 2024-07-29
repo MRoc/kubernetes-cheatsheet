@@ -274,9 +274,7 @@ spec:
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: frontend
-  labels:
-    tier: frontend
+  name: my-replica-set
 spec:
   replicas: 3
   selector:
@@ -618,8 +616,7 @@ kind: Secret
 metadata:
   name: app-secret
 data:
-  VARIABLE_1: hello
-  VARIABLe_2: world
+  VARIABLE: dmFsdWUtMg0KDQo=
 ```
 
 ```bash
