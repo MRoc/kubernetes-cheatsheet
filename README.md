@@ -898,6 +898,26 @@ spec:
         claimName: pv-claim
 ```
 
+To bind a volume to a claim, use `claimRef` like the following:
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: example-app-pv
+spec:
+  storageClassName: local-storage
+  claimRef:
+    name: example-app-pv-claim
+    namespace: default
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /run/desktop/mnt/host/wsl/data/example-app-pv
+```
+
 
 ### Static Provisioning
 
